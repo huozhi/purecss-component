@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+.demo::before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -.25em;
+}
+
+.demo {
+  text-align: center;
+  height: 100%;
+}
+
+.wrap {
+  position: relative;
+  margin: auto;
+  display: inline-block;
+  vertical-align: middle;
+}

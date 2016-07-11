@@ -1,0 +1,129 @@
+.menu,
+.submenu,
+.dropdown {
+  padding: 0;
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+.menu li {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li a {
+  font-size: 16px;
+  display: block;
+  border: 1px solid #0f88eb;
+  color: #333;
+  padding: 18px 30px;
+}
+
+.submenu > li:not(:first-child) > a {
+  border-top: 0;
+}
+
+.submenu li a {
+  color: #666;
+}
+
+.menu > .dropdown {
+  position: relative;
+  display: inline-block;
+  width: 180px;
+}
+
+.menu .submenu,
+.submenu .submenu {
+  display: none;
+}
+
+.submenu {
+  margin: 0;
+  position: absolute;
+  list-style: none;
+  display: block;
+  text-align: left;
+  width: 180px;
+}
+
+.menu .submenu {
+  padding-top: 7px;
+}
+
+.submenu .submenu {
+  padding-left: 7px;
+}
+
+.menu .submenu::before,
+.menu .submenu::after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 20px;
+  border: 7px solid transparent;
+}
+
+.menu .submenu::before {
+  border-bottom: 7px solid #0f88eb;
+  top: -7px;
+}
+
+.menu .submenu::after {
+  border-bottom: 7px solid #fff;
+  top: -6px;
+}
+
+.submenu .submenu::before,
+.submenu .submenu::after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  border: 7px solid transparent;
+}
+
+.submenu .submenu::before {
+  border-right: 7px solid #0f88eb;
+  left: -7px;
+}
+
+.submenu .submenu::after {
+  border-right: 7px solid #fff;
+  left: -6px;
+}
+
+.menu > .submenu {
+  left: 0;
+}
+
+.menu .submenu .submenu {
+  top: 0;
+  left: 180px;
+}
+
+li.dropdown:hover > .submenu {
+  display: block;
+}
+
+.menu .submenu > li.dropdown:hover > .submenu {
+  display: block;
+}
+
+.submenu li {
+  display: block;
+  position: relative;
+}
+
+.submenu > .dropdown {
+  display: block;
+}
